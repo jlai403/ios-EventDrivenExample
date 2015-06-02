@@ -1,0 +1,9 @@
+{
+  "name": "ios-EventDrivenExample",
+  "version": "0.0.1",
+  "description": "example of using web sockets to drive real time events",
+  "dependencies": {
+    "express": "^4.12.4",
+    "socket.io": "^1.3.5"
+  }
+}

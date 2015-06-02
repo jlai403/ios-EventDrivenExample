@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Home Controller" customClass="HomeController" customModule="ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disconnected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-Eq-a5h">
+                                <rect key="frame" x="233.5" y="30" width="134" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaW-Yb-2Lu">
+                                <rect key="frame" x="189" y="25" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Dqc-p0-5CE"/>
+                                    <constraint firstAttribute="height" constant="36" id="iMj-Wz-Z2S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkm-yQ-9ip">
+                                <rect key="frame" x="141" y="75" width="320" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="518" id="dZc-X2-xks"/>
+                                    <constraint firstAttribute="width" constant="320" id="hEA-eC-fE5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dZc-X2-xks"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hkm-yQ-9ip" secondAttribute="trailing" constant="25" id="7YU-0r-Lrv"/>
+                            <constraint firstItem="aTE-Eq-a5h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="AT2-QR-ZOu"/>
+                            <constraint firstAttribute="centerX" secondItem="aTE-Eq-a5h" secondAttribute="centerX" constant="-0.5" id="WKv-Rh-haP"/>
+                            <constraint firstItem="Hkm-yQ-9ip" firstAttribute="top" secondItem="aTE-Eq-a5h" secondAttribute="bottom" constant="20" id="ZWg-0G-PmL"/>
+                            <constraint firstItem="aTE-Eq-a5h" firstAttribute="centerY" secondItem="ZaW-Yb-2Lu" secondAttribute="centerY" constant="-0.25" id="acz-3t-LTK"/>
+                            <constraint firstItem="aTE-Eq-a5h" firstAttribute="leading" secondItem="ZaW-Yb-2Lu" secondAttribute="trailing" constant="8.5" id="rp8-Te-JuW"/>
+                            <constraint firstItem="Hkm-yQ-9ip" firstAttribute="centerX" secondItem="aTE-Eq-a5h" secondAttribute="centerX" constant="0.5" id="t0m-2a-yx1"/>
+                            <constraint firstItem="Hkm-yQ-9ip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="xp4-u3-jBs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7YU-0r-Lrv"/>
+                                <exclude reference="xp4-u3-jBs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="connectionStatusLabel" destination="ZaW-Yb-2Lu" id="YVY-f0-Kaz"/>
+                        <outlet property="connectionStatusTextLabel" destination="aTE-Eq-a5h" id="umT-ph-71Y"/>
+                        <outlet property="resultsLabel" destination="Hkm-yQ-9ip" id="5YO-mN-Wz4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
