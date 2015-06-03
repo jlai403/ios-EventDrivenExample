@@ -5,20 +5,22 @@ server.listen(1337, function(){
 });
 
 app.get('/message', function(req,res){
-  res.sendFile(__dirname + '/emitMessage.html');
+  res.sendFile(__dirname + '/message.html');
 });
 
 var socketIO = require('socket.io')(server);
 
-var users = new Array()
+var clients = new Array()
 
 socketIO.on('connection', function(socket){
-  console.log("a user connected");
+  var userId = socket.handshake.query.userId
+  console.log("a user connected: " + userId);
+  clients[userId] = socket.id
 
-
-  socket.on('add user', function(userId) {
-    users[userId] = socket.id;
-    console.log("users: " + userIds.toString());
+  socket.on('disconnect', function() {
+    console.log("a user disconnected");
+    delete clients[clients.indexOf(socket.id)]
+    console.log("number of clients: " + clients.length);
   });
 
   socket.on('broadcast message', function(message) {
@@ -27,7 +29,7 @@ socketIO.on('connection', function(socket){
   });
 
   socket.on('private message', function(data){
-    var destination = users[data.userId];
+    var destination = clients[data.userId];
     socketIO.sockets.socket(destination).emit(data.message);
   });
 

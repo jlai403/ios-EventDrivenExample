@@ -2,7 +2,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <script>
-  var socketIO = io();
+  var socketIO = io('http://localhost:1337', {query: 'userId=web'});
 
   $(document).ready(function(){
     $('form').submit(function(){

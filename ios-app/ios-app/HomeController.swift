@@ -35,14 +35,10 @@ class HomeController: UIViewController {
     private func establishConnection() {
         SocketService.sharedInstance.establishConnection()
         
-        renderConnecting()
-        
-        var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-        dispatch_after(dispatchTime, dispatch_get_main_queue()) {
-            if SocketService.sharedInstance.isConnected() {
-                self.renderConnected()
-            }
+        while (!SocketService.sharedInstance.isConnected()) {
+            renderConnecting()
         }
+        renderConnected()
     }
     
     

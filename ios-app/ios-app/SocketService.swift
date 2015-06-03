@@ -8,7 +8,9 @@ class SocketService {
     private var shouldReconnect: Bool
     
     private init() {
-        socket = SocketIOClient(socketURL: SOCKET_URL)
+        var queryParams = ["userId": UserData().nickname]
+        var connectOptions = ["connectParams": queryParams]
+        socket = SocketIOClient(socketURL: SOCKET_URL, options: connectOptions)
         shouldReconnect = false
     }
     

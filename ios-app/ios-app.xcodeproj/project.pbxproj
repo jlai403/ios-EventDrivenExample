@@ -28,6 +28,8 @@
 		6C605EF51B1D5E9D00271246 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C605EE81B1D5E9D00271246 /* WebSocket.swift */; };
 		6C605EF71B1D5F1C00271246 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C605EF61B1D5F1C00271246 /* SocketService.swift */; };
 		6C605EFA1B1D696C00271246 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C605EF91B1D696C00271246 /* SwiftyJSON.swift */; };
+		6CD405361B1EC00C00BD4E1D /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD405351B1EC00C00BD4E1D /* SetupController.swift */; };
+		6CD405381B1EC47000BD4E1D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD405371B1EC47000BD4E1D /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		6C605EE81B1D5E9D00271246 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		6C605EF61B1D5F1C00271246 /* SocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		6C605EF91B1D696C00271246 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SocketIOClientSwift/SwiftyJSON.swift; sourceTree = "<group>"; };
+		6CD405351B1EC00C00BD4E1D /* SetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		6CD405371B1EC47000BD4E1D /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				6C605EBA1B1D56F800271246 /* Images.xcassets */,
 				6C605EBC1B1D56F800271246 /* LaunchScreen.xib */,
 				6C605EB11B1D56F800271246 /* Supporting Files */,
+				6CD405371B1EC47000BD4E1D /* UserData.swift */,
 			);
 			path = "ios-app";
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				6C605EB51B1D56F800271246 /* HomeController.swift */,
+				6CD405351B1EC00C00BD4E1D /* SetupController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 				6C605EEF1B1D5E9D00271246 /* SocketIOClient.swift in Sources */,
 				6C605EE91B1D5E9D00271246 /* SocketAckManager.swift in Sources */,
 				6C605EEC1B1D5E9D00271246 /* SocketEngineClient.swift in Sources */,
+				6CD405381B1EC47000BD4E1D /* UserData.swift in Sources */,
 				6C605EF41B1D5E9D00271246 /* SwiftRegex.swift in Sources */,
 				6C605EF51B1D5E9D00271246 /* WebSocket.swift in Sources */,
 				6C605EEB1B1D5E9D00271246 /* SocketEngine.swift in Sources */,
@@ -288,6 +295,7 @@
 				6C605EF31B1D5E9D00271246 /* SocketTypes.swift in Sources */,
 				6C605EEA1B1D5E9D00271246 /* SocketAnyEvent.swift in Sources */,
 				6C605EFA1B1D696C00271246 /* SwiftyJSON.swift in Sources */,
+				6CD405361B1EC00C00BD4E1D /* SetupController.swift in Sources */,
 				6C605EB41B1D56F800271246 /* AppDelegate.swift in Sources */,
 				6C605EF21B1D5E9D00271246 /* SocketParser.swift in Sources */,
 			);
