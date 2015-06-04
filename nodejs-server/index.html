@@ -1,0 +1,53 @@
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<style>
+  .form * {
+    margin: 10px;
+  }
+</style>
+
+<script>
+  var socketIO = io('http://localhost:1337', {query: 'userId=web'});
+
+  $(document).ready(function(){
+    $('#broadcast-message').submit(function(){
+      socketIO.emit('broadcast message', $(this).serialize());
+      $(this).reset();
+    });
+
+    $('#private-message').submit(function(){
+      socketIO.emit('private message', $(this).serialize());
+      $(this).reset();
+    });
+
+    $('#segue-to-blue').submit(function(){
+      socketIO.emit('segue to blue', $(this).serialize());
+      $(this).reset();
+    });
+  })
+</script>
+
+<form id="broadcast-message" action="" class="form" style="max-width:500px; padding: 15px;" onsubmit="return false">
+  <h5>Broadcast message:</h5>
+  <input class="form-control" name="message" placeholder="message"/>
+  <input class="btn btn-info" type="submit"/>
+</form>
+
+<form id="private-message" action="" class="form" style="max-width:500px; padding: 15px;" onsubmit="return false">
+  <h5>Private message:</h5>
+  <input class="form-control" name="userId" placeholder="user"/>
+  <input class="form-control" name="message" placeholder="message"/>
+  <input class="btn btn-info" type="submit"/>
+</form>
+
+
+<form id="segue-to-blue" action="" class="form" style="max-width:500px; padding: 15px;"  onsubmit="return false">
+  <h5>Segue to blue:</h5>
+  <input class="form-control user" placeholder="user"/>
+  <input class="btn btn-info" type="submit"/>
+</form>
